@@ -9,8 +9,7 @@ let handler = async (m, { conn, command }) => {
 try {    
     
 if (command == 'consejo') {
-let res = await fetch("https://zenzapis.xyz/randomtext/motivasi?apikey=hdiiofficial")
-//let res = await fetch("https://supra-api.herokuapp.com/api/conselho?apikey=supraz")
+let res = await fetch("https://api.zahwazein.xyz/randomtext/motivasi?apikey=${global.keysxxx}")
 let json = await res.json()
 let frase = json.result.message
 let frase1 = await translate(frase, { to: 'es', autoCorrect: true })
