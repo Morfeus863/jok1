@@ -39,35 +39,35 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     } Good Feeling - Flo Rida*`;
   try {
     const yt_play = await search(args.join(" "));
-    let texto1 = `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
-❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${yt_play[0].title}
-❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${yt_play[0].ago}
-❏ ⌚ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${secondString(yt_play[0].duration.seconds)}
-❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${`${MilesNumber(yt_play[0].views)}`}
-❏ 👤 *𝙰𝚄𝚃𝙾𝚁:* ${yt_play[0].author.name}
-❏ ⏯️ *𝙲𝙰𝙽𝙰𝙻:* ${yt_play[0].author.url}
+    let texto1 = `*◉—⌈🔊 ЗАГРУЗКА ИЗ ЮТУБА 🔊⌋—◉*\n
+❏ 📌 *Название:* ${yt_play[0].title}
+❏ 📆 *Опубликовано:* ${yt_play[0].ago}
+❏ ⌚ *Продолжительность:* ${secondString(yt_play[0].duration.seconds)}
+❏ 👀 *Просмотрено:* ${`${MilesNumber(yt_play[0].views)}`}
+❏ 👤 *Автор:* ${yt_play[0].author.name}
+❏ ⏯️ *канал:* ${yt_play[0].author.url}
 ❏ 🆔 *𝙸𝙳:* ${yt_play[0].videoId}
-❏ 🪬 *𝚃𝙸𝙿𝙾:* ${yt_play[0].type}
-❏ 🔗 *𝙻𝙸𝙽𝙺:* ${yt_play[0].url}`.trim();
+❏ 🪬 *Тип:* ${yt_play[0].type}
+❏ 🔗 *Ссылка:* ${yt_play[0].url}`.trim();
     const buttons = [
       {
         buttonId: `#ytmp3 ${yt_play[0].url}`,
-        buttonText: { displayText: "🎵 𝐀𝐔𝐃𝐈𝐎 🎵" },
+        buttonText: { displayText: "🎵 ТРЭК 🎵" },
         type: 1,
       },
       {
         buttonId: `#ytmp4 ${yt_play[0].url}`,
-        buttonText: { displayText: "🎥 𝐕𝐈𝐃𝐄𝐎 🎥" },
+        buttonText: { displayText: "🎥 КЛИП 🎥" },
         type: 1,
       },
       {
         buttonId: `#playlist ${text}`,
-        buttonText: { displayText: "📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
+        buttonText: { displayText: "📋 ВСЕ РЕЗУЛЬТАТЫ 📋" },
         type: 1,
       },
     ];
     let buttonMessage = {
-      document: { url: "https://wa.me/5219992095479" },
+      document: { url: "https://wa.me/79524197466" },
       fileName: "❏ 🌿 ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ",
       mimetype: "application/vnd.ms-excel",
       caption: texto1,
@@ -85,7 +85,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
           previewType: "VIDEO",
           thumbnailUrl: yt_play[0].image,
           mediaUrl: `${yt_play[0].url}`,
-          sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`,
+          sourceUrl: `https://chat.whatsapp.com/FQ4gui0wUTO94zgP2YUbsH`,
         },
       },
     };
@@ -105,18 +105,18 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
       );
       let jsonn = await ytLink.json();
       let aud = await jsonn.result.audio;
-      let capt = `❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}\n❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${published}\n❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${views}\n❏ 🔗 *𝙻𝙸𝙽𝙺:* ${url}`;
+      let capt = `❏ 📌 *Название:* ${title}\n❏ 📆 *Опубликовано:* ${published}\n❏ 👀 *Просмотрено:* ${views}\n❏ 🔗 *Ссылка:* ${url}`;
       const buttons = [
         {
           buttonId: `#playlist ${title}`,
-          buttonText: { displayText: "📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
+          buttonText: { displayText: "📋 ВСЕ РЕЗУЛЬТАТЫ 📋" },
           type: 1,
         },
       ];
       const buttonMessage = {
         image: { url: thumbnail },
         caption: capt,
-        footer: "*ᴇɴᴠɪᴀɴᴅᴏ ᴀᴜᴅɪᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*",
+        footer: "*Ищем и скачиваем ваше аудио,одну минуточку...*",
         buttons: buttons,
         headerType: 4,
       };
@@ -138,7 +138,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 };
 handler.help = ["play", "play2"].map((v) => v + " < busqueda >");
 handler.tags = ["downloader"];
-handler.command = /^play2?$/i;
+handler.command = /^песня?$/i;
 export default handler;
 
 /*import { youtubeSearch } from '@bochilteam/scraper'
