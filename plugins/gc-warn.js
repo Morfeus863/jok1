@@ -10,7 +10,7 @@ let warntext = `*[❗] 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴 𝙰 𝚄𝙽𝙰 𝙿�
 if (!who) throw m.reply(warntext, m.chat, { mentions: conn.parseMention(warntext)}) 
 user.warn += 1
   
-await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `*@${who.split`@`[0]}*`} 𝚁𝙴𝙲𝙸𝙱𝙸𝙾 𝚄𝙽𝙰 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 𝙴𝙽 𝙴𝚂𝚃𝙴 𝙶𝚁𝚄𝙿𝙾!`, `*ADVERTENCIAS ${user.warn}/3*\n\n${wm}`, pp, [['📋 𝙻𝙸𝚂𝚃𝚆𝙰𝚁𝙽 📋', '#listwarn']], m, { mentions: [who] })
+await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `*@${who.split`@`[0]}*`} Вам вынесено предупреждение админами группы!`, `*Предупреждение ${user.warn}/3*\n\n${wm}`, pp, [['📋 СПИСОК НАРУШИТЕЛЕЙ 📋', '#listwarn']], m, { mentions: [who] })
 	
 if (user.warn >= 3) {
 if (!bot.restrict) return m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙽𝙾 𝚃𝙸𝙴𝙽𝙴 𝙷𝙰𝙱𝙸𝙻𝙸𝚃𝙰𝙳𝙾 𝙻𝙰𝚂 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝙲𝙸𝙾𝙽𝙴𝚂 (#𝚎𝚗𝚊𝚋𝚕𝚎 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝) 𝙲𝙾𝙽𝚃𝙰𝙲𝚃𝙴 𝙲𝙾𝙽 𝙴𝙻 𝙿𝙰𝚁𝙰 𝚀𝚄𝙴 𝙻𝙾 𝙷𝙰𝙱𝙸𝙻𝙸𝚃𝙴*')        
@@ -21,7 +21,7 @@ await conn.groupParticipantsUpdate(m.chat, [who], 'remove')
 } 
 return !1
 }
-handler.command = /^(advertir|advertencia|warn|warning)$/i
+handler.command = /^(предупреждение|advertencia|warn|warning)$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true

@@ -11,7 +11,7 @@ throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾 𝚂𝙸𝙴𝙽𝚃𝙾 𝙷𝚄𝙱�
 }}
 handler.help = ['setname <text>']
 handler.tags = ['group']
-handler.command = /^(setname)$/i
+handler.command = /^(сменитьназвание)$/i
 handler.group = true
 handler.admin = true
 export default handler

@@ -10,7 +10,7 @@ if (!who) throw m.reply(warntext, m.chat, { mentions: conn.parseMention(warntext
 if (m.mentionedJid.includes(conn.user.jid)) return
 if (user.warn == 0) throw '*[❗] 𝙴𝙻 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 𝚃𝙸𝙴𝙽𝙴 0 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰𝚂*'  
 user.warn -= 1
-await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `♻️ *@${who.split`@`[0]}*`} 𝚂𝙴 𝙻𝙴 𝚀𝚄𝙸𝚃𝙾 𝚄𝙽𝙰 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 `, `*ADVERTENCIAS:*\n⚠️ *Antes: ${user.warn + 1}/3*\n⚠️ *Ahora: ${user.warn}/3*\n\n${wm}`, pp, [['📋 𝙻𝙸𝚂𝚃𝚆𝙰𝚁𝙽 📋', '#listwarn']], m, { mentions: [who] })}
+await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `♻️ *@${who.split`@`[0]}*`} С вас снято нарушение `, `*Предупреждений:*\n⚠️ *Было: ${user.warn + 1}/3*\n⚠️ *Стало: ${user.warn}/3*\n\n${wm}`, pp, [['📋 ССПИСОК НАРУШИТЕЛЕЙ 📋', '#listwarn']], m, { mentions: [who] })}
 handler.command = /^(unwarn|delwarn|deladvertir|deladvertencia|delwarning)$/i
 handler.group = true
 handler.admin = true

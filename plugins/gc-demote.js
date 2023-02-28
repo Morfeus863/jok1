@@ -21,11 +21,11 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-conn.reply(m.chat, `*[ ✅ ] ÓRDENES RECIBIDAS*`, m)
+conn.reply(m.chat, `*[ ✅ ] Запрос выполнен*`, m)
 }}
 handler.help = ['*593xxx*','*@usuario*','*responder chat*'].map(v => 'demote ' + v)
 handler.tags = ['group']
-handler.command = /^(demote|quitarpoder|quitaradmin)$/i
+handler.command = /^(снятьадмина|quitarpoder|quitaradmin)$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
