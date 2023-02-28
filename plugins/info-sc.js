@@ -1,9 +1,9 @@
 let handler = async (m, { conn, usedPrefix }) => {
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
-let texto1 = `*https://github.com/BrunoSobrino/TheMystic-Bot-MD*`
+let texto1 = `*https://chat.whatsapp.com/FQ4gui0wUTO94zgP2YUbsH*`
 let buttonMessage= {
-'document': { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+'document': { url: `https://chat.whatsapp.com/FQ4gui0wUTO94zgP2YUbsH` },
 'mimetype': `application/${document}`,
 'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
 'fileLength': 99999999999999,
@@ -12,7 +12,7 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/BrunoSobrino/TheMystic-Bot-MD',
+'mediaUrl': 'https://chat.whatsapp.com/FQ4gui0wUTO94zgP2YUbsH',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
@@ -26,5 +26,5 @@ let buttonMessage= {
 {buttonId: `${usedPrefix}donar`, buttonText: {displayText: '𝙳𝙾𝙽𝙰𝚁'}, type: 1}],
 'headerType': 6 }
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })}
-handler.command = ['sc','script']
+handler.command = ['sc','скрипт']
 export default handler
