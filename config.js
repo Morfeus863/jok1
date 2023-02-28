@@ -16,7 +16,7 @@ global.owner = [
 global.suittag = ['79524197466'] 
 global.prems = ['79524197466'] 
 
-global.packname = '(☞ﾟ∀ﾟ)☞'
+global.packname = '(JoKeR☞'
 global.author = '★JoKeR★'
 global.wm = '★JoKeR★'
 global.igfg = '★JoKeR★'
